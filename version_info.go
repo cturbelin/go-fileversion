@@ -246,14 +246,14 @@ func (f Info) FixedInfo() FixedFileInfo {
 		FileVersion: FileVersion{
 			Major: uint16(vsFixedInfo.FileVersionMS >> 16),
 			Minor: uint16(vsFixedInfo.FileVersionMS & 0xffff),
-			Patch: uint16(vsFixedInfo.FileVersionLS & 0xffff),
-			Build: uint16(vsFixedInfo.FileVersionLS >> 16),
+			Patch: uint16(vsFixedInfo.FileVersionLS >> 16),
+			Build: uint16(vsFixedInfo.FileVersionLS & 0xffff),
 		},
 		ProductVersion: FileVersion{
 			Major: uint16(vsFixedInfo.ProductVersionMS >> 16),
 			Minor: uint16(vsFixedInfo.ProductVersionMS & 0xffff),
-			Patch: uint16(vsFixedInfo.ProductVersionLS & 0xffff),
-			Build: uint16(vsFixedInfo.ProductVersionLS >> 16),
+			Patch: uint16(vsFixedInfo.ProductVersionLS >> 16),
+			Build: uint16(vsFixedInfo.ProductVersionLS & 0xffff),
 		},
 		FileFlagsMask: vsFixedInfo.FileFlagsMask,
 		FileFlags:     vsFixedInfo.FileFlags,
